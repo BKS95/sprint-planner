@@ -1,0 +1,32 @@
+<div class="sprint-list-container">
+    <div class="content">
+        
+        <div class="row" *ngIf="dataService.plannedSprints.length !==0">
+
+            <div>
+                <button class="btn btn-primary modify-sprint" id="modify" (click)="modifySprint()">Modify Sprint</button>
+            </div>
+
+            <div *ngFor="let item of dataService.plannedSprints" class="mt-3 p-2 col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                <div class="d-flex story-item align-items-center">
+                    <div class="avatar-container d-flex justify-content-center align-items-center">
+                        <div class="avatar-circle">
+                            <div class="avatar-text">NA</div>
+                        </div>
+                    </div>
+                    <div class="story-details ms-3">
+                        <div class="fw-bolder name">{{item.name}}</div>
+                        <div class="point">Story Points:  {{item.point}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="dataService.plannedSprints.length ===0" class="no-data">
+            <div>
+                <p class="fw-bolder">You do not have any sprint items planned yet</p>
+                <button (click)="addSprint()" id="addSprintButton" class="btn btn-primary add-story-btn">Generate Sprint</button>
+            </div>
+        </div>
+    </div>
+</div>

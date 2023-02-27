@@ -1,0 +1,19 @@
+<div class="add-sprint-container">
+    <div class="header">
+        <div class="title p-2 fw-bolder">Add Story</div>
+    </div>
+
+    <div class="content p-2">
+        <div>
+            <label class="form-label">Sprint Point</label>
+            <input class="form-control" [(ngModel)]="sprintPoint" (ngModelChange)="checkForValidityofSprintPoint()">
+            <span class="text-danger" *ngIf="submit && sprintPointError">Please enter a valid story point</span>
+        </div>
+    </div>
+
+    <div class="footer p-2">
+        <button class="btn btn-primary btn-block" (click)="autoSelect()" id="autoSelect">Auto Select Stories</button>
+        <button class="btn btn-danger btn-block mt-3" (click)="clearStories()" id="clearStory">Clear Stories</button>
+        <button class="btn btn-secondary btn-block mt-3" (click)="clearSprint()" id="clearSprint">Clear Sprint</button>
+    </div>
+</div>

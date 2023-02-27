@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+app-story-list, app-sprint-list  {
+    width: 100%;
+}
+
+p,button {
+    font-size: 14px !important;
+}

@@ -1,0 +1,30 @@
+<div class="add-story-container">
+    <div class="header">
+        <div class="title p-2 fw-bolder">Add Story</div>
+    </div>
+
+    <div class="input-content p-2">
+        <form [formGroup]="storyForm">
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label">Story Name</label>
+                    <input class="form-control" formControlName="name">
+                    <span class="text-danger" *ngIf="submit && storyForm.controls.name.errors && storyForm.controls.name.errors.required">Please enter a valid story name</span>
+                    <span class="text-danger" *ngIf="submit && storyForm.controls.name.errors && storyForm.controls.name.errors.maxlength">Maximum length of story name should be 50 characters</span>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Story Point</label>
+                    <input class="form-control" formControlName="point">
+                    <span class="text-danger" *ngIf="submit && storyForm.controls.point.errors && (storyForm.controls.point.errors.required || storyForm.controls.point.errors.pattern)">Please enter a valid story point</span>
+                    <span class="text-danger" *ngIf="submit && storyForm.controls.point.errors && (storyForm.controls.point.errors.max || storyForm.controls.point.errors.min)">Story point must be in the range 1-10</span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer p-2 d-flex justify-content-end">
+        <button class="btn btn-primary" (click)="addStory()" id="addButton">Add Story</button>
+        <button class="btn btn-secondary ms-3" (click)="close()" id="closeBtton">Close</button>
+    </div>
+</div>

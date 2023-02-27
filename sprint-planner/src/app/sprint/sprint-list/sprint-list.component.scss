@@ -1,0 +1,56 @@
+.sprint-list-container {
+    height: 100%;
+    display: flex;
+}
+
+.content {
+    width: 100%;
+}
+
+.no-data {
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.add-story-btn {
+    border-radius: 0;
+}
+
+.story-item {
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px;
+    min-height: 105px;
+    border-left: 10px solid gray;
+}
+
+.avatar-circle {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    background: gray;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.modify-sprint {
+    border-radius: 0px;
+}
+
+.name {
+    font-size: 14px;
+}
+
+.point {
+    font-style: italic;
+    font-size: 13px;
+    font-weight: bold;
+    color: darkgray;
+}
